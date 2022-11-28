@@ -16,7 +16,15 @@ Practice running the visualizations to better understand how mostly sorted versu
 
 ### Practice Reading Through and Running Algorithms
 
-Read through and practice running each algorithm in the python Jupyter notebook:
+Read through and practice running each algorithm in the python Jupyter notebook.
+
+You can do this in two ways:
+
+1. You can download the python Jupyter notebook in this repo.
+
+(For help getting started with Jupyter notebooks: https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/execute.html)
+
+2. Run the notebook on Google Colab:
 
 https://colab.research.google.com/drive/1jSscjpBGmjXLTM3yL-Z3WFJ0TJyQ3swC?usp=sharing
 

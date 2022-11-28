@@ -1,8 +1,20 @@
-# Sorting Algorithms
+# Sorting Algorithms Code & Visualizations
 
+## Visualizations
 
+Practice running the visualizations to better understand how mostly sorted versus completely random arrays complete at different times for Bubble sort, Insertion sort, and Merge sort: http://www.sorting-algorithms.com/
 
-## Bubble Sort
+1. What do you notice?
+
+2. Which algorithm(s) benefit from arrays that are mostly sorted?
+
+3. Which algorithm(s) stay largely consistent?
+
+4. Why do you think this is?
+
+## Sorting Algorithms Python Code
+
+### Bubble Sort
 
 ```
 def bubble_sort(array):
@@ -37,7 +49,7 @@ def bubble_sort(array):
     return array
 ```
 
-## Insertion Sort
+### Insertion Sort
 
 ```
 def insertion_sort(array):
@@ -71,7 +83,7 @@ def insertion_sort(array):
     return array
 ```
 
-## Merge Sort
+### Merge Sort
 
 1. A function that recursively splits the input in half
 2. A function that merges both halves, producing a sorted array

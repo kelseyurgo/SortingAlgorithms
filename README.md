@@ -26,7 +26,7 @@ You can do this in two ways:
 
 2. Run the notebook on Google Colab:
 
-https://colab.research.google.com/drive/1jSscjpBGmjXLTM3yL-Z3WFJ0TJyQ3swC?usp=sharing
+https://colab.research.google.com/drive/1GjOWEjiI96PldK3lO3QhbCVPLmDw_h5c?usp=sharing
 
 ### Bubble Sort
 

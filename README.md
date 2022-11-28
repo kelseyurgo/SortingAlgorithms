@@ -14,6 +14,12 @@ Practice running the visualizations to better understand how mostly sorted versu
 
 ## Sorting Algorithms Python Code
 
+### Practice Reading Through and Running Algorithms
+
+Read through and practice running each algorithm in the python Jupyter notebook:
+
+https://colab.research.google.com/drive/1jSscjpBGmjXLTM3yL-Z3WFJ0TJyQ3swC?usp=sharing
+
 ### Bubble Sort
 
 ```

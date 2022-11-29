@@ -103,37 +103,60 @@ def insertion_sort(array):
 2. A function that merges both halves, producing a sorted array
 
 ```
-def merge_sort(arr):
-    if len(arr) > 1:
-        left_arr = arr[:len(arr)//2] # split array in half and assign left half to left_arr
-        right_arr = arr[len(arr)//2:] # split array in half and assign right half to right_arr
-        
-        # recursion
-        merge_sort(left_arr) # continue splitting in half
-        merge_sort(right_arr) # continue splitting in half
-        
-        # merge
-        i = 0 # left_arr index
-        j = 0 # right_arr index
-        k = 0 # merged array index
-        while i < len(left_arr) and j < len(right_arr):
-            if left_arr[i] < right_arr[j]: # if the value in the left array is less than the right array
-                arr[k] = left_arr[i] # assign value from left array to merged array
-                i += 1 # increment i index
-            else: # otherwise the value in the right array is less than the left array
-                arr[k] = right_arr[j] # assign value from right array to merged array
-                j += 1 # increment j index
-            k += 1 # increment k index in both cases
-        
-        # for the cases where there are no more values in the right_arr and you can simply transfer the rest from the left_arr
-        while i < len(left_arr): 
-            arr[k] = left_arr[i] 
-            i += 1
-            k += 1
+def merge(left, right):
+    # If the first array is empty, then nothing needs
+    # to be merged, and you can return the second array as the result
+    if len(left) == 0:
+        return right
 
-        # for the cases where there are no more values in the left_arr and you can simply transfer the rest from the right_arr
-        while j < len(right_arr):
-            arr[k] = right_arr[j]
-            j += 1
-            k += 1
+    # If the second array is empty, then nothing needs
+    # to be merged, and you can return the first array as the result
+    if len(right) == 0:
+        return left
+
+    result = []
+    index_left = index_right = 0
+
+    # Now go through both arrays until all the elements
+    # make it into the resultant array
+    while len(result) < len(left) + len(right):
+        # The elements need to be sorted to add them to the
+        # resultant array, so you need to decide whether to get
+        # the next element from the first or the second array
+        if left[index_left] <= right[index_right]:
+            result.append(left[index_left])
+            index_left += 1
+        else:
+            result.append(right[index_right])
+            index_right += 1
+
+        # If you reach the end of either array, then you can
+        # add the remaining elements from the other array to
+        # the result and break the loop
+        if index_right == len(right):
+            result += left[index_left:]
+            break
+
+        if index_left == len(left):
+            result += right[index_right:]
+            break
+
+    return result
+```
+
+```
+def merge_sort(array):
+    # If the input array contains fewer than two elements,
+    # then return it as the result of the function
+    if len(array) < 2:
+        return array
+
+    midpoint = len(array) // 2
+
+    # Sort the array by recursively splitting the input
+    # into two equal halves, sorting each half and merging them
+    # together into the final result
+    return merge(
+        left=merge_sort(array[:midpoint]),
+        right=merge_sort(array[midpoint:]))
 ```
